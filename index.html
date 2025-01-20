@@ -18,20 +18,25 @@
             line-height: 1.5;
             color: #111;
             background-color: #fff;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
         }
 
-        .container {
-            max-width: 60rem;
-            margin: 0 auto;
-            padding: 2rem 1rem;
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
         }
 
-        /* Header */
         header {
             background-color: #f3f4f6;
             padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 10;
         }
 
@@ -55,9 +60,8 @@
             color: #3b82f6;
         }
 
-        /* Sections */
-        section {
-            margin-bottom: 4rem;
+        h1 {
+            font-size: 4rem;
         }
 
         h2 {
@@ -65,38 +69,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 2rem;
-            padding: 2rem 0;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-      
-        .hero-content h1 {
-            font-size: 3rem;
-        }
-
-        .hero-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 2rem;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Skills Section */
         .skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -107,10 +79,9 @@
             background-color: #e5e7eb;
             padding: 0.5rem 1rem;
             border-radius: 0.25rem;
-            font-size: 0.875rem;
+            font-size: 1rem;
         }
 
-        /* Work Section */
         .work-grid {
             display: grid;
             gap: 1rem;
@@ -126,38 +97,24 @@
             padding: 1.5rem;
         }
 
-        .card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Contact Section */
         .contact-links {
             display: flex;
             gap: 1rem;
         }
 
         .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
             text-decoration: none;
             color: #111;
+            font-weight: bold;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
+            h1 {
+                font-size: 2.5rem;
             }
 
-            .hero-image {
-                margin-bottom: 1rem;
-            }
-
-            .work-grid {
-                grid-template-columns: 1fr;
+            h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -166,78 +123,74 @@
     <header>
         <nav>
             <ul>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#work">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Sai Kaushik Baira</h1>
-                <p>Design Engineer | Robotics Enthusiast | AI & Machine Learning Specialist</p>
-            </div>
-            <div class="hero-image">
-                <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="Sai Kaushik Baira">
-            </div>
-        </section>
+    <section id="hero">
+        <h1>Sai Kaushik Baira</h1>
+        <p>Design Engineer | Robotics Enthusiast | AI & Machine Learning Specialist</p>
+    </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Accomplished Design Engineer with expertise in design, analysis, machine learning, and computer vision. Currently working as a Design Engineer at Alcom Extrusions Pvt Ltd, Hyderabad, India. Aiming to pursue an MS in Robotics with a concentration in Artificial Intelligence and Human-Computer Interaction.</p>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate Design Engineer with a strong background in robotics, machine learning, and computer vision. Currently, I work as a Design Engineer at Alcom Extrusions Pvt Ltd, contributing to innovative solutions and automation in manufacturing processes. My goal is to pursue an MS in Robotics, specializing in Artificial Intelligence and Human-Computer Interaction, and drive transformative innovations in the field.</p>
+        <p>My expertise includes developing automated systems, enhancing industrial workflows, and leading data-driven projects for quality assurance and process optimization.</p>
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <span class="skill-item">Python</span>
-                <span class="skill-item">MATLAB</span>
-                <span class="skill-item">SolidWorks</span>
-                <span class="skill-item">OpenCV</span>
-                <span class="skill-item">PyTorch</span>
-                <span class="skill-item">Machine Learning</span>
-                <span class="skill-item">CAD</span>
-                <span class="skill-item">ANSYS</span>
-            </div>
-        </section>
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-list">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">MATLAB</span>
+            <span class="skill-item">SolidWorks</span>
+            <span class="skill-item">OpenCV</span>
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">Machine Learning</span>
+            <span class="skill-item">CAD</span>
+            <span class="skill-item">Prototyping</span>
+            <span class="skill-item">Automation</span>
+        </div>
+    </section>
 
-        <section id="work">
-            <h2>Projects</h2>
-            <div class="work-grid">
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Computer Vision-Based Dimensional Measurement System</h3>
-                        <p>Designed and implemented a real-time computer vision system for automated dimensional measurements at Alcom Extrusions Pvt Ltd, reducing inspection time by 70% while ensuring critical tolerance compliance.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Enhancing Welding Processes Using ML</h3>
-                        <p>Developed a system combining 2D laser scanner inputs to detect and classify welding defects, improving weld quality and reducing inspection costs.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <h3>Thermal Management of Lithium-Ion Battery Pack</h3>
-                        <p>Enhanced the thermal efficiency of a lithium-ion battery pack using phase change materials, achieving a 20% improvement in performance compared to traditional methods.</p>
-                    </div>
+    <section id="work">
+        <h2>Projects</h2>
+        <div class="work-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3><a href="project1.html">Computer Vision-Based Dimensional Measurement System</a></h3>
+                    <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
                 </div>
             </div>
-        </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="mailto:saikaushikbaira06@gmail.com" class="contact-link">Email</a>
-                <a href="https://github.com/Kaushikbaira" class="contact-link">GitHub</a>
-                <a href="https://linkedin.com/in/kaushik-baira" class="contact-link">LinkedIn</a>
+            <div class="card">
+                <div class="card-content">
+                    <h3><a href="project2.html">Enhancing Welding Processes Using ML</a></h3>
+                    <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
+                </div>
             </div>
-        </section>
-    </main>
+
+            <div class="card">
+                <div class="card-content">
+                    <h3><a href="project3.html">Thermal Management of Lithium-Ion Battery Pack</a></h3>
+                    <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+            <a href="mailto:saikaushikbaira06@gmail.com" class="contact-link">Email</a>
+            <a href="https://github.com/Kaushikbaira" class="contact-link">GitHub</a>
+            <a href="https://linkedin.com/in/kaushik-baira" class="contact-link">LinkedIn</a>
+        </div>
+    </section>
 </body>
 </html>
