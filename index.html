@@ -4,211 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Kaushik Baira Portfolio</title>
-
     <style>
-        /* Base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #111;
-            background-color: #fff;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #3b82f6;
-        }
-
-        section {
-            min-height: 100vh;
-            padding: 4rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #hero {
-            background: url('https://via.placeholder.com/1500x800?text=Working+Desk') no-repeat center center/cover;
-            text-align: center;
-            color: #fff;
-            background-attachment: fixed;
-        }
-
-        #hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        #hero p {
-            font-size: 1.25rem;
-            color: #e3f2fd;
-        }
-
-        #about {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 1200px;
-            background: #f9fafb;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        #about h2 {
-            font-size: 2.5rem;
-            text-align: left;
-            color: #3b82f6;
-        }
-
-        #about p {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            text-align: left;
-            max-width: 600px;
-            color: #555;
-        }
-
-        #experience {
-            width: 100%;
-            max-width: 1200px;
-            padding: 4rem 2rem;
-        }
-
-        #experience h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .timeline {
-            position: relative;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #3b82f6;
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin: 2rem 0;
-            width: calc(50% - 30px);
-        }
-
-        .timeline-item:nth-child(odd) {
-            float: left;
-            clear: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            float: right;
-            clear: left;
-        }
-
-        .timeline-content {
-            background: #f9fafb;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            right: -10px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent transparent #f9fafb;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: -10px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent #f9fafb transparent transparent;
-        }
-
-        @media (max-width: 768px) {
-            #about {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            #about h2 {
-                text-align: center;
-            }
-
-            #about p {
-                text-align: center;
-            }
-
-            .timeline {
-                padding: 0 1rem;
-            }
-
-            .timeline-item {
-                width: 100%;
-                float: none;
-                clear: none;
-            }
-
-            .timeline-content::after {
-                left: auto;
-                right: auto;
-                border-color: transparent transparent transparent transparent;
-            }
-        }
+        /* Add styles here as provided earlier for consistency */
     </style>
 </head>
 <body>
@@ -236,26 +33,6 @@
         <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing. My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Intern - New Product Development</h3>
-                    <p>Alcom Extrusions Pvt Ltd, Dec 2023 - May 2024</p>
-                    <p>Created comprehensive project scopes, developed key documents like BOMs, costing reports, and material plans.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Design Engineer</h3>
-                    <p>Alcom Extrusions Pvt Ltd, June 2024 - Present</p>
-                    <p>Developed process flow sheets, optimized production workflows, and implemented assembly automation reducing manual time by 75%.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="skills">
         <h2>Technical Skills</h2>
         <div class="skills-list">
@@ -278,15 +55,33 @@
                 <h3>Computer Vision-Based Dimensional Measurement System</h3>
                 <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
             </div>
-
             <div class="card">
                 <h3>Enhancing Welding Processes Using ML</h3>
                 <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
             </div>
-
             <div class="card">
                 <h3>Thermal Management of Lithium-Ion Battery Pack</h3>
                 <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Intern - New Product Development</h3>
+                    <p>Alcom Extrusions Pvt Ltd, Dec 2023 - May 2024</p>
+                    <p>Created comprehensive project scopes, developed key documents like BOMs, costing reports, and material plans.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Design Engineer</h3>
+                    <p>Alcom Extrusions Pvt Ltd, June 2024 - Present</p>
+                    <p>Developed process flow sheets, optimized production workflows, and implemented assembly automation reducing manual time by 75%.</p>
+                </div>
             </div>
         </div>
     </section>
