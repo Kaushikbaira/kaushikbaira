@@ -15,138 +15,192 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.5;
             color: #111;
             background-color: #fff;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-        }
-
-        section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            scroll-snap-align: start;
-            padding: 4rem 2rem;
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #f3f4f6;
-            padding: 1rem 0;
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 10;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         nav ul {
+            list-style: none;
             display: flex;
-            justify-content: center;
-            list-style-type: none;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
+            gap: 2rem;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #111;
+            color: #333;
             font-weight: 500;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
             color: #3b82f6;
         }
 
-        h1 {
-            font-size: 4rem;
+        section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        h2 {
-            font-size: 2.5rem;
+        #hero {
+            background: linear-gradient(to bottom, #e3f2fd, #fff);
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        #about {
-            max-width: 60%;
-            text-align: center;
+        #hero p {
             font-size: 1.25rem;
-            line-height: 2;
-            padding: 2rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            background: #f9fafb;
+            color: #555;
         }
 
-        .skills-list {
+        #about {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill-item {
-            background-color: #e5e7eb;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        .work-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .card {
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            background-color: #f9fafb;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 1.5rem;
+            align-items: center;
             justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            text-align: left;
+        }
+
+        #about p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        #experience {
+            width: 100%;
+            max-width: 1200px;
+            padding: 4rem 2rem;
+        }
+
+        #experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
             padding: 2rem 0;
+            max-width: 800px;
         }
 
-        .contact-link img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #3b82f6;
+            transform: translateX(-50%);
         }
 
-        .contact-link img:hover {
-            transform: scale(1.2);
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            width: calc(50% - 30px);
+        }
+
+        .timeline-item:nth-child(odd) {
+            float: left;
+            clear: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            float: right;
+            clear: left;
+        }
+
+        .timeline-content {
+            background: #f9fafb;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #f9fafb;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #f9fafb transparent transparent;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
+            .timeline {
+                padding: 0 1rem;
             }
 
-            h2 {
-                font-size: 2rem;
+            .timeline-item {
+                width: 100%;
+                float: none;
+                clear: none;
+            }
+
+            .timeline-content::after {
+                left: auto;
+                right: auto;
+                border-color: transparent transparent transparent transparent;
             }
 
             #about {
-                max-width: 90%;
-                font-size: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            #about h2 {
+                text-align: center;
+            }
+
+            #about p {
+                text-align: center;
             }
         }
     </style>
@@ -154,11 +208,14 @@
 <body>
     <header>
         <nav>
+            <div class="logo">Sai Kaushik Baira</div>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#work">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -170,8 +227,27 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a passionate Design Engineer with a strong background in robotics, machine learning, and computer vision. Currently, I work as a Design Engineer at Alcom Extrusions Pvt Ltd, contributing to innovative solutions and automation in manufacturing processes. My goal is to pursue an MS in Robotics, specializing in Artificial Intelligence and Human-Computer Interaction, and drive transformative innovations in the field.</p>
-        <p>My expertise includes developing automated systems, enhancing industrial workflows, and leading data-driven projects for quality assurance and process optimization.</p>
+        <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing. My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Intern - New Product Development</h3>
+                    <p>Alcom Extrusions Pvt Ltd, Dec 2023 - May 2024</p>
+                    <p>Created comprehensive project scopes, developed key documents like BOMs, costing reports, and material plans.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Design Engineer</h3>
+                    <p>Alcom Extrusions Pvt Ltd, June 2024 - Present</p>
+                    <p>Developed process flow sheets, optimized production workflows, and implemented assembly automation reducing manual time by 75%.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
@@ -193,43 +269,39 @@
         <h2>Projects</h2>
         <div class="work-grid">
             <div class="card">
-                <div class="card-content">
-                    <h3><a href="project1.html">Computer Vision-Based Dimensional Measurement System</a></h3>
-                    <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
-                    <p><strong>Tools Used:</strong> Python, OpenCV, Industrial Cameras</p>
-                </div>
+                <h3>Computer Vision-Based Dimensional Measurement System</h3>
+                <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
             </div>
 
             <div class="card">
-                <div class="card-content">
-                    <h3><a href="project2.html">Enhancing Welding Processes Using ML</a></h3>
-                    <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
-                    <p><strong>Tools Used:</strong> Python, SVM, Random Forest, 2D Laser Scanners</p>
-                </div>
+                <h3>Enhancing Welding Processes Using ML</h3>
+                <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
             </div>
 
             <div class="card">
-                <div class="card-content">
-                    <h3><a href="project3.html">Thermal Management of Lithium-Ion Battery Pack</a></h3>
-                    <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
-                    <p><strong>Tools Used:</strong> ANSYS, CAD Tools, Phase Change Materials</p>
-                </div>
+                <h3>Thermal Management of Lithium-Ion Battery Pack</h3>
+                <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
+        <h2>Contact</h2>
         <div class="contact-links">
-            <a href="mailto:saikaushikbaira06@gmail.com" class="contact-link">
+            <a href="mailto:saikaushikbaira06@gmail.com">
                 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
             </a>
-            <a href="https://github.com/Kaushikbaira" class="contact-link">
+            <a href="https://github.com/Kaushikbaira">
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
             </a>
-            <a href="https://linkedin.com/in/kaushik-baira" class="contact-link">
+            <a href="https://linkedin.com/in/kaushik-baira">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
             </a>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Sai Kaushik Baira. All rights reserved.</p>
+    </footer>
 </body>
 </html>
