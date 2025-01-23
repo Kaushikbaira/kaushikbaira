@@ -80,8 +80,29 @@
         }
 
         #about {
-            max-width: 800px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            gap: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #about .about-title {
+            flex: 1;
+            text-align: left;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        #about .about-content {
+            flex: 2;
+            text-align: left;
+            font-size: 1.1rem;
             line-height: 1.8;
         }
 
@@ -171,6 +192,15 @@
             #hero p {
                 font-size: 1rem;
             }
+
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about .about-title {
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
@@ -194,8 +224,11 @@
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing. My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+        <div class="about-title">About Me</div>
+        <div class="about-content">
+            <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
+            <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+        </div>
     </section>
 
     <section id="skills">
@@ -227,8 +260,8 @@
             </div>
 
             <div class="card">
-                <h3>Autonomous Fingerprint vehicle starter</h3>
-                <p>Created a fingerprint vehicle starter that works using Ardino UNO.</p>
+                <h3>Thermal Management of Lithium-Ion Battery Pack</h3>
+                <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
             </div>
         </div>
     </section>
