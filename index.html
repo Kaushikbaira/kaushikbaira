@@ -146,7 +146,7 @@
             color: #555;
         }
 
-        #experience {
+         #experience {
             position: relative;
             margin: 2rem auto;
             padding: 2rem 0;
@@ -163,8 +163,8 @@
         #experience::before {
             content: "";
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 10%;
+            bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
             width: 4px;
@@ -173,22 +173,19 @@
 
         .timeline-item {
             position: relative;
-            width: calc(50% - 2rem);
-            margin-bottom: 2rem;
+            width: 50%;
+            margin-bottom: 3rem;
         }
 
         .timeline-item.left {
-            position: absolute;
-            left: 0;
             text-align: right;
             padding-right: 2rem;
         }
 
         .timeline-item.right {
-            position: absolute;
-            right: 0;
             text-align: left;
             padding-left: 2rem;
+            left: 50%;
         }
 
         .timeline-item .marker {
@@ -220,7 +217,6 @@
 
             .timeline-item {
                 width: 100%;
-                float: none;
                 text-align: center;
                 padding: 0;
             }
@@ -353,7 +349,7 @@
 
     <section id="hero">
         <h1>Sai Kaushik Baira</h1>
-        <p>Design Engineer | Robotics Enthusiast | AI & Machine Learning Specialist</p>
+        <p>Design Engineer | Robotics Enthusiast </p>
     </section>
 
     <section id="about">
@@ -388,17 +384,9 @@
         </div>
     </section>
 
-   <section id="experience">
+ <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline-item left">
-            <div class="marker"></div>
-            <div>
-                <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-                <p><strong>Duration:</strong> December 2021 – May 2022</p>
-                <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
-            </div>
-        </div>
-        <div class="timeline-item right">
+        <div class="timeline-item left" style="top: 20%;">
             <div class="marker"></div>
             <div>
                 <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
@@ -406,7 +394,15 @@
                 <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
             </div>
         </div>
-</section>
+        <div class="timeline-item right" style="top: 50%;">
+            <div class="marker"></div>
+            <div>
+                <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
+                <p><strong>Duration:</strong> December 2021 – May 2022</p>
+                <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
+            </div>
+        </div>
+    </section>
 
     <section id="skills">
         <h2>Technical Skills</h2>
