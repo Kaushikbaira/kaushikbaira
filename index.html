@@ -146,25 +146,25 @@
             color: #555;
         }
 
-         #experience {
+        #experience {
             position: relative;
             margin: 2rem auto;
             padding: 2rem 0;
             max-width: 1000px;
-            text-align: center;
         }
 
         #experience h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             color: #3b82f6;
+            text-align: center;
         }
 
         #experience::before {
             content: "";
             position: absolute;
-            top: 10%;
-            bottom: 10%;
+            top: 2rem;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             width: 4px;
@@ -173,30 +173,20 @@
 
         .timeline-item {
             position: relative;
-            width: 50%;
+            width: 45%;
             margin-bottom: 3rem;
         }
 
         .timeline-item.left {
             text-align: right;
             padding-right: 2rem;
+            float: left;
         }
 
         .timeline-item.right {
             text-align: left;
             padding-left: 2rem;
-            left: 50%;
-        }
-
-        .timeline-item .marker {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            background: #3b82f6;
-            border-radius: 50%;
+            float: right;
         }
 
         .timeline-item h3 {
@@ -218,6 +208,7 @@
             .timeline-item {
                 width: 100%;
                 text-align: center;
+                float: none;
                 padding: 0;
             }
 
@@ -386,16 +377,14 @@
 
  <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline-item left" style="top: 20%;">
-            <div class="marker"></div>
+        <div class="timeline-item left">
             <div>
                 <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
                 <p><strong>Duration:</strong> June 2022 – Present</p>
                 <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
             </div>
         </div>
-        <div class="timeline-item right" style="top: 50%;">
-            <div class="marker"></div>
+        <div class="timeline-item right">
             <div>
                 <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
                 <p><strong>Duration:</strong> December 2021 – May 2022</p>
@@ -453,7 +442,7 @@
             <a href="https://linkedin.com/in/kaushik-baira">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
             </a>
-             <a href="https://instagram.com/in/kaushik-baira">
+             <a href="https://www.instagram.com/kaushikbaira?igsh=ZDhxYXRhY3FvYW1z">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
             </a>
         </div>
