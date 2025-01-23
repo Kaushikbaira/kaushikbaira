@@ -151,16 +151,23 @@
             margin: 2rem auto;
             padding: 2rem 0;
             max-width: 1000px;
+            text-align: center;
+        }
+
+        #experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #3b82f6;
         }
 
         #experience::before {
             content: "";
             position: absolute;
             top: 0;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             width: 4px;
-            height: 100%;
             background: #3b82f6;
         }
 
@@ -171,13 +178,15 @@
         }
 
         .timeline-item.left {
-            float: left;
+            position: absolute;
+            left: 0;
             text-align: right;
             padding-right: 2rem;
         }
 
         .timeline-item.right {
-            float: right;
+            position: absolute;
+            right: 0;
             text-align: left;
             padding-left: 2rem;
         }
@@ -202,6 +211,24 @@
         .timeline-item p {
             font-size: 1rem;
             color: #555;
+        }
+
+        @media (max-width: 768px) {
+            #experience::before {
+                left: 25%;
+            }
+
+            .timeline-item {
+                width: 100%;
+                float: none;
+                text-align: center;
+                padding: 0;
+            }
+
+            .timeline-item.left,
+            .timeline-item.right {
+                text-align: center;
+            }
         }
 
         #skills {
@@ -361,24 +388,24 @@
         </div>
     </section>
 
-    <section id="experience">
-    <h2>Experience</h2>
-    <div class="timeline-item left">
-        <div class="marker"></div>
-        <div>
-            <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-            <p><strong>Duration:</strong> December 2021 – May 2022</p>
-            <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
+   <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline-item left">
+            <div class="marker"></div>
+            <div>
+                <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
+                <p><strong>Duration:</strong> December 2021 – May 2022</p>
+                <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
+            </div>
         </div>
-    </div>
-    <div class="timeline-item right">
-        <div class="marker"></div>
-        <div>
-            <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
-            <p><strong>Duration:</strong> June 2022 – Present</p>
-            <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
+        <div class="timeline-item right">
+            <div class="marker"></div>
+            <div>
+                <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
+                <p><strong>Duration:</strong> June 2022 – Present</p>
+                <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
+            </div>
         </div>
-    </div>
 </section>
 
     <section id="skills">
@@ -431,7 +458,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
             </a>
              <a href="https://instagram.com/in/kaushik-baira">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
             </a>
         </div>
     </section>
