@@ -4,304 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Kaushik Baira Portfolio</title>
-
     <style>
-        /* Base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
-            color: #111;
-            background-color: #fff;
-            scroll-behavior: smooth;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
 
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
         }
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #3b82f6;
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
         }
 
         section {
-            min-height: 100vh;
-            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        .projects {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            gap: 1rem;
         }
 
-        #hero {
-            background: linear-gradient(to bottom, #e3f2fd, #fff);
-            text-align: center;
-        }
-
-        #hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        #hero p {
-            font-size: 1.25rem;
-            color: #555;
-        }
-
-        #about {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            max-width: 1200px;
-        }
-
-        #about h2 {
-            font-size: 2.5rem;
-            text-align: left;
-        }
-
-        #about p {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            text-align: left;
-            max-width: 600px;
-        }
-
-        #experience {
-            width: 100%;
-            max-width: 1200px;
-            padding: 4rem 2rem;
-        }
-
-        #experience h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .timeline {
-            position: relative;
-            margin: 0 auto;
-            padding: 2rem 0;
-            max-width: 800px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: #3b82f6;
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin: 2rem 0;
-            width: calc(50% - 30px);
-        }
-
-        .timeline-item:nth-child(odd) {
-            float: left;
-            clear: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            float: right;
-            clear: left;
-        }
-
-        .timeline-content {
-            background: #f9fafb;
-            padding: 1rem 1.5rem;
+        .project {
+            border: 1px solid #ddd;
+            padding: 1rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: relative;
+            background: #f9f9f9;
         }
 
-        .timeline-item:nth-child(odd) .timeline-content::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            right: -10px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent transparent #f9fafb;
+        .project h3 {
+            margin: 0;
+            font-size: 1.5rem;
         }
 
-        .timeline-item:nth-child(even) .timeline-content::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: -10px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent #f9fafb transparent transparent;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        @media (max-width: 768px) {
-            .timeline {
-                padding: 0 1rem;
-            }
+        .skill {
+            background: #ddd;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
 
-            .timeline-item {
-                width: 100%;
-                float: none;
-                clear: none;
-            }
+        .contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
 
-            .timeline-content::after {
-                left: auto;
-                right: auto;
-                border-color: transparent transparent transparent transparent;
-            }
-
-            #about {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            #about h2 {
-                text-align: center;
-            }
-
-            #about p {
-                text-align: center;
-            }
+        .contact a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Sai Kaushik Baira</div>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
         <h1>Sai Kaushik Baira</h1>
         <p>Design Engineer | Robotics Enthusiast | AI & Machine Learning Specialist</p>
-    </section>
+    </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing. My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+        <p>I am a passionate Design Engineer with a strong background in robotics, machine learning, and computer vision. Currently, I work as a Design Engineer at Alcom Extrusions Pvt Ltd, contributing to innovative solutions and automation in manufacturing processes. My goal is to pursue an MS in Robotics, specializing in Artificial Intelligence and Human-Computer Interaction, and drive transformative innovations in the field.</p>
+        <p>My expertise includes developing automated systems, enhancing industrial workflows, and leading data-driven projects for quality assurance and process optimization.</p>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Intern - New Product Development</h3>
-                    <p>Alcom Extrusions Pvt Ltd, Dec 2023 - May 2024</p>
-                    <p>Created comprehensive project scopes, developed key documents like BOMs, costing reports, and material plans.</p>
-                </div>
+        <p><strong>Design Engineer - Alcom Extrusions Pvt Ltd</strong> (June 2022 – Present)</p>
+        <ul>
+            <li>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency.</li>
+            <li>Led data-driven projects for quality assurance, reducing defect rates by 10%.</li>
+            <li>Collaborated with cross-functional teams to implement machine learning models for predictive maintenance.</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Technology in Mechanical Engineering</strong></p>
+        <p>Jawaharlal Nehru Technological University, Hyderabad (August 2018 – May 2022)</p>
+        <p><strong>CGPA:</strong> 8.5/10</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Computer Vision-Based Dimensional Measurement System</h3>
+                <p>Implemented a real-time vision system for automated measurements, reducing inspection time by 70%.</p>
+                <p><strong>Tools Used:</strong> Python, OpenCV, Industrial Cameras</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Design Engineer</h3>
-                    <p>Alcom Extrusions Pvt Ltd, June 2024 - Present</p>
-                    <p>Developed process flow sheets, optimized production workflows, and implemented assembly automation reducing manual time by 75%.</p>
-                </div>
+            <div class="project">
+                <h3>Enhancing Welding Processes Using Machine Learning</h3>
+                <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
+                <p><strong>Tools Used:</strong> Python, SVM, Random Forest, 2D Laser Scanners</p>
+            </div>
+            <div class="project">
+                <h3>Thermal Management of Lithium-Ion Battery Pack</h3>
+                <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
+                <p><strong>Tools Used:</strong> ANSYS, CAD Tools, Phase Change Materials</p>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-list">
-            <span class="skill-item">Python</span>
-            <span class="skill-item">MATLAB</span>
-            <span class="skill-item">SolidWorks</span>
-            <span class="skill-item">OpenCV</span>
-            <span class="skill-item">PyTorch</span>
-            <span class="skill-item">Machine Learning</span>
-            <span class="skill-item">CAD</span>
-            <span class="skill-item">Prototyping</span>
-            <span class="skill-item">Automation</span>
-        </div>
-    </section>
-
-<section id="work">
-        <h2>Projects</h2>
-        <div class="work-grid">
-            <div class="card">
-                <div class="card-content">
-                    <h3><a href="project1.html">Computer Vision-Based Dimensional Measurement System</a></h3>
-                    <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3><a href="project2.html">Enhancing Welding Processes Using ML</a></h3>
-                    <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <h3><a href="project3.html">Thermal Management of Lithium-Ion Battery Pack</a></h3>
-                    <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
-                </div>
-            </div>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">MATLAB</div>
+            <div class="skill">SolidWorks</div>
+            <div class="skill">OpenCV</div>
+            <div class="skill">PyTorch</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">CAD</div>
+            <div class="skill">Prototyping</div>
+            <div class="skill">Automation</div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <div class="contact-links">
-            <a href="mailto:saikaushikbaira06@gmail.com" class="contact-link">Email</a>
-            <a href="https://github.com/Kaushikbaira" class="contact-link">GitHub</a>
-            <a href="https://linkedin.com/in/kaushik-baira" class="contact-link">LinkedIn</a>
-        </div>
+        <p><strong>Email:</strong> <a href="mailto:saikaushikbaira06@gmail.com">saikaushikbaira06@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kaushik-baira">linkedin.com/in/kaushik-baira</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Kaushikbaira">github.com/Kaushikbaira</a></p>
     </section>
-
-    <footer>
-        <p>&copy; 2025 Sai Kaushik Baira. All rights reserved.</p>
-    </footer>
 </body>
 </html>
