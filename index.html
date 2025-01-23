@@ -80,29 +80,97 @@
         }
 
         #about {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            align-items: center;
-            max-width: 1200px;
-            gap: 2rem;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        #about .about-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3b82f6;
-        }
-
-        #about .about-content {
-            font-size: 1.1rem;
+            max-width: 800px;
+            text-align: center;
             line-height: 1.8;
         }
 
-        #education {
+        #skills .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            background: #f0f4f8;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+        }
+
+        #work .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .contact-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .contact-links img:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+             #education {
             max-width: 1200px;
             padding: 2rem;
             background: #fff;
@@ -181,6 +249,8 @@
             font-size: 1rem;
             color: #555;
         }
+            }
+        }
     </style>
 </head>
 <body>
@@ -190,6 +260,8 @@
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#work">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -203,15 +275,12 @@
     </section>
 
     <section id="about">
-        <div class="about-title">About Me</div>
-        <div class="about-content">
-            <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
-            <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
-        </div>
+        <h2>About Me</h2>
+        <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing. My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
+     <section id="education">
+       <h2>Education</h2>
         <div class="education-item">
             <h3>Bachelor of Technology in Mechanical Engineering</h3>
             <p>Jawaharlal Nehru Technological University, Hyderabad</p>
@@ -220,8 +289,8 @@
         </div>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
+     <section id="experience">
+       <h2>Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="marker"></div>
@@ -272,8 +341,8 @@
             </div>
 
             <div class="card">
-                <h3>Thermal Management of Lithium-Ion Battery Pack</h3>
-                <p>Optimized thermal efficiency with phase change materials, achieving a 20% performance improvement.</p>
+                <h3>Autonomous Fingerprint vehicle starter</h3>
+                <p>Created a fingerprint vehicle starter that works using Ardino UNO.</p>
             </div>
         </div>
     </section>
