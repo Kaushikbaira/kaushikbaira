@@ -80,9 +80,9 @@
         }
 
         #about {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
             align-items: center;
-            justify-content: center;
             max-width: 1200px;
             gap: 2rem;
             padding: 2rem;
@@ -92,115 +92,94 @@
         }
 
         #about .about-title {
-            flex: 1;
-            text-align: left;
             font-size: 2rem;
             font-weight: bold;
             color: #3b82f6;
         }
 
         #about .about-content {
-            flex: 2;
-            text-align: left;
             font-size: 1.1rem;
             line-height: 1.8;
         }
 
-        #skills .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .skill-item {
-            background: #f0f4f8;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-        }
-
-        #work .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            padding: 1.5rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 0.5rem;
+        #education {
+            max-width: 1200px;
+            padding: 2rem;
             background: #fff;
+            border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            margin: 2rem auto;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        #education h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #3b82f6;
         }
 
-        .card h3 {
-            font-size: 1.25rem;
+        #education .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        #education .education-item h3 {
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
-        .card p {
-            font-size: 0.9rem;
+        #education .education-item p {
+            font-size: 1rem;
             color: #555;
         }
 
-        #contact {
-            text-align: center;
-        }
-
-        #contact .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .contact-links img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s;
-        }
-
-        .contact-links img:hover {
-            transform: scale(1.2);
-        }
-
-        footer {
-            text-align: center;
+        #experience {
+            max-width: 1200px;
             padding: 2rem;
-            background: #f8f9fa;
-            font-size: 0.9rem;
-            color: #777;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
         }
 
-        @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
-            }
+        #experience h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #3b82f6;
+        }
 
-            #hero h1 {
-                font-size: 2rem;
-            }
+        #experience .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
 
-            #hero p {
-                font-size: 1rem;
-            }
+        #experience .timeline-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
 
-            #about {
-                flex-direction: column;
-                text-align: center;
-            }
+        #experience .timeline-item .marker {
+            width: 20px;
+            height: 20px;
+            background: #3b82f6;
+            border-radius: 50%;
+            margin-top: 0.5rem;
+        }
 
-            #about .about-title {
-                margin-bottom: 1rem;
-            }
+        #experience .timeline-item .content {
+            flex: 1;
+        }
+
+        #experience .timeline-item .content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #experience .timeline-item .content p {
+            font-size: 1rem;
+            color: #555;
         }
     </style>
 </head>
@@ -228,6 +207,39 @@
         <div class="about-content">
             <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
             <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Bachelor of Technology in Mechanical Engineering</h3>
+            <p>Jawaharlal Nehru Technological University, Hyderabad</p>
+            <p><strong>Duration:</strong> August 2018 – May 2022</p>
+            <p><strong>CGPA:</strong> 8.5/10</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="marker"></div>
+                <div class="content">
+                    <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
+                    <p><strong>Duration:</strong> June 2022 – Present</p>
+                    <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="marker"></div>
+                <div class="content">
+                    <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
+                    <p><strong>Duration:</strong> December 2021 – May 2022</p>
+                    <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
+                </div>
+            </div>
         </div>
     </section>
 
