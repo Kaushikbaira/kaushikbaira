@@ -56,7 +56,6 @@
         }
 
         section {
-            min-height: 100vh;
             padding: 4rem 2rem;
             display: flex;
             flex-direction: column;
@@ -67,6 +66,7 @@
         #hero {
             background: linear-gradient(to bottom, #e3f2fd, #fff);
             text-align: center;
+            min-height: 100vh;
         }
 
         #hero h1 {
@@ -79,11 +79,14 @@
             color: #555;
         }
 
-         #about {
-            padding: 2rem;
+        #about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
             margin: 2rem auto;
             max-width: 1000px;
-            text-align: center;
+            align-items: center;
+            padding: 2rem;
             background: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -92,16 +95,119 @@
         #about .about-title {
             font-size: 2.5rem;
             font-weight: bold;
-            margin-bottom: 1.5rem;
             color: #3b82f6;
+            text-align: left;
         }
 
         #about .about-content {
             font-size: 1.2rem;
             line-height: 1.8;
             color: #333;
+            text-align: left;
+        }
+
+        #education {
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 2rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #3b82f6;
+        }
+
+        #education .education-item {
+            text-align: left;
             margin: 0 auto;
             max-width: 800px;
+        }
+
+        #education .education-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #education .education-item p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        #education .education-item ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+            color: #555;
+        }
+
+        #experience {
+            position: relative;
+            margin: 2rem auto;
+            padding: 2rem 0;
+            max-width: 1000px;
+        }
+
+        #experience::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #3b82f6;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: calc(50% - 2rem);
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item.left {
+            float: left;
+            text-align: right;
+            padding-right: 2rem;
+        }
+
+        .timeline-item.right {
+            float: right;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        .timeline-item .marker {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: #3b82f6;
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .timeline-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        #skills {
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
         }
 
         #skills .skills-list {
@@ -179,123 +285,25 @@
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
+            #about {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
-            #hero h1 {
-                font-size: 2rem;
+            #experience::before {
+                left: 25%;
             }
 
-            #hero p {
-                font-size: 1rem;
-         #education {
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 2rem;
-            background: rgba(59, 130, 246, 0.1);
-            border: 2px solid #3b82f6;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        #education h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #3b82f6;
-        }
-
-        #education .education-item {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-
-        #education .education-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        #education .education-item p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        #education .education-item ul {
-            list-style-type: disc;
-            margin-left: 2rem;
-            color: #555;
-        }
-
-     #experience {
-            max-width: 1200px;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-        }
-
-        #experience h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: #3b82f6;
-        }
-
-        #experience .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        #experience .timeline-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        #experience .timeline-item .marker {
-            width: 20px;
-            height: 20px;
-            background: #3b82f6;
-            border-radius: 50%;
-            margin-top: 0.5rem;
-        }
-
-        #experience .timeline-item .content {
-            flex: 1;
-        }
-
-        #experience .timeline-item .content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #experience .timeline-item .content p {
-            font-size: 1rem;
-            color: #555;
-        }
-         #about .about-content {
-                font-size: 1rem;
+            .timeline-item {
+                width: 100%;
+                float: none;
+                text-align: center;
+                padding: 0;
             }
 
-            #education {
-                padding: 1.5rem;
-            }
-
-            #education h2 {
-                font-size: 2rem;
-            }
-
-            #education .education-item h3 {
-                font-size: 1.3rem;
-            }
-
-            #education .education-item p {
-                font-size: 1rem;
+            .timeline-item.left,
+            .timeline-item.right {
+                text-align: center;
             }
         }
     </style>
@@ -348,34 +356,30 @@
             <ul>
                 <li>President of the Robotics Club, leading a team to national-level competitions</li>
                 <li>Organized workshops on AI and Machine Learning applications in engineering</li>
-                <li>Published a paper on "Optimization of operational parameters for performance and emissions of a diesel engine fueled with diesel and biodiesel"</li>
+                <li>Published a paper on "Automation in Small Scale Manufacturing Units"</li>
             </ul>
         </div>
     </section>
 
-   <section id="experience">
+    <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="marker"></div>
-                <div class="content">
-                    <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
-                    <p><strong>Duration:</strong> June 2022 – Present</p>
-                    <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
-                </div>
+        <div class="timeline-item left">
+            <div class="marker"></div>
+            <div>
+                <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
+                <p><strong>Duration:</strong> December 2021 – May 2022</p>
+                <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
             </div>
-
-            <div class="timeline-item">
-                <div class="marker"></div>
-                <div class="content">
-                    <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-                    <p><strong>Duration:</strong> December 2021 – May 2022</p>
-                    <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
-                </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="marker"></div>
+            <div>
+                <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
+                <p><strong>Duration:</strong> June 2022 – Present</p>
+                <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
             </div>
         </div>
     </section>
-
 
     <section id="skills">
         <h2>Technical Skills</h2>
