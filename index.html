@@ -146,14 +146,26 @@
             color: #555;
         }
 
+          section {
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         #experience {
-            position: relative;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            gap: 2rem;
             margin: 2rem auto;
-            padding: 2rem 0;
+            padding: 2rem;
             max-width: 1000px;
+            position: relative;
         }
 
         #experience h2 {
+            grid-column: span 2;
             font-size: 2.5rem;
             margin-bottom: 2rem;
             color: #3b82f6;
@@ -163,58 +175,52 @@
         #experience::before {
             content: "";
             position: absolute;
-            top: 2rem;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 3rem;
+            bottom: 3rem;
+            left: 30%;
             width: 4px;
             background: #3b82f6;
         }
 
-        .timeline-item {
-            position: relative;
-            width: 45%;
-            margin-bottom: 3rem;
-        }
-
-        .timeline-item.left {
+        .timeline-dates {
             text-align: right;
-            padding-right: 2rem;
-            float: left;
+            padding-right: 1rem;
+            font-size: 1rem;
+            color: #555;
         }
 
-        .timeline-item.right {
-            text-align: left;
-            padding-left: 2rem;
-            float: right;
+        .timeline-content {
+            padding-left: 1rem;
         }
 
-        .timeline-item h3 {
+        .timeline-content h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: #111;
         }
 
-        .timeline-item p {
+        .timeline-content p {
             font-size: 1rem;
             color: #555;
         }
 
         @media (max-width: 768px) {
+            #experience {
+                grid-template-columns: 1fr;
+            }
+
             #experience::before {
-                left: 25%;
+                left: 5%;
             }
 
-            .timeline-item {
-                width: 100%;
-                text-align: center;
-                float: none;
-                padding: 0;
+            .timeline-dates {
+                text-align: left;
+                padding-right: 0;
+                padding-bottom: 1rem;
             }
 
-            .timeline-item.left,
-            .timeline-item.right {
-                text-align: center;
+            .timeline-content {
+                padding-left: 0;
             }
         }
 
@@ -375,19 +381,20 @@
         </div>
     </section>
 
- <section id="experience">
+<body>
+    <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline-item left">
+        <div class="timeline-dates">
+            <p>June 2022 – Present</p>
+            <p>December 2021 – May 2022</p>
+        </div>
+        <div class="timeline-content">
             <div>
                 <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
-                <p><strong>Duration:</strong> June 2022 – Present</p>
                 <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
             </div>
-        </div>
-        <div class="timeline-item right">
-            <div>
+            <div style="margin-top: 2rem;">
                 <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-                <p><strong>Duration:</strong> December 2021 – May 2022</p>
                 <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
             </div>
         </div>
@@ -444,6 +451,9 @@
             </a>
              <a href="https://www.instagram.com/kaushikbaira?igsh=ZDhxYXRhY3FvYW1z">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+            </a>
+            <a href="https://x.com/BairaKaushik?t=LzqgbkiZuXqPIuexu4MqBQ&s=08">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="X (Twitter)">
             </a>
         </div>
     </section>
