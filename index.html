@@ -18,6 +18,8 @@
             color: #111;
             background-color: #fff;
             scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
         header {
@@ -57,60 +59,82 @@
 
         section {
             min-height: 100vh;
-            padding: 4rem 2rem;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            align-items: center;
-        }
-
-        #hero {
-            background: linear-gradient(to bottom, #e3f2fd, #fff);
-            text-align: center;
-        }
-
-        #hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        #hero p {
-            font-size: 1.25rem;
-            color: #555;
-        }
-
-        #about {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            align-items: center;
-            max-width: 1200px;
-            gap: 2rem;
             padding: 2rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
             background: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
         }
 
-        #skills .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .skill-item {
-            background: #f0f4f8;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
+        .section-title {
+            font-size: 2rem;
             font-weight: bold;
+            color: #3b82f6;
+            text-align: left;
         }
 
-        #work .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        #experience .timeline {
+            position: relative;
+            margin: 2rem auto;
+            padding: 1rem 0;
+            max-width: 800px;
+        }
+
+        #experience .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #3b82f6;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+        .timeline-item.left .content {
+            text-align: right;
+            margin-right: 2rem;
+        }
+
+        .timeline-item.right .content {
+            text-align: left;
+            margin-left: 2rem;
+        }
+
+        .timeline-item .marker {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: #3b82f6;
+            border-radius: 50%;
         }
 
         .card {
@@ -136,125 +160,15 @@
             color: #555;
         }
 
-        #contact {
-            text-align: center;
-        }
-
-        #contact .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .contact-links img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s;
-        }
-
-        .contact-links img:hover {
-            transform: scale(1.2);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: #f8f9fa;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
+            .two-column {
+                grid-template-columns: 1fr;
             }
 
-            #hero h1 {
-                font-size: 2rem;
-            }
-
-            #hero p {
-                font-size: 1rem;
-             #education {
-            max-width: 1200px;
-            padding: 2rem;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-        }
-
-        #education h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: #3b82f6;
-        }
-
-        #education .education-item {
-            margin-bottom: 1.5rem;
-        }
-
-        #education .education-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #education .education-item p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        #experience {
-            max-width: 1200px;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-        }
-
-        #experience h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: #3b82f6;
-        }
-
-        #experience .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        #experience .timeline-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        #experience .timeline-item .marker {
-            width: 20px;
-            height: 20px;
-            background: #3b82f6;
-            border-radius: 50%;
-            margin-top: 0.5rem;
-        }
-
-        #experience .timeline-item .content {
-            flex: 1;
-        }
-
-        #experience .timeline-item .content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #experience .timeline-item .content p {
-            font-size: 1rem;
-            color: #555;
-        }
+            .timeline-item.left .content,
+            .timeline-item.right .content {
+                text-align: center;
+                margin: 0;
             }
         }
     </style>
@@ -280,37 +194,28 @@
         <p>Design Engineer | Robotics Enthusiast | AI & Machine Learning Specialist</p>
     </section>
 
-     <section id="about">
-        <div class="about-title">About Me</div>
-        <div class="about-content">
+    <section id="about" class="two-column">
+        <div class="section-title">About Me</div>
+        <div class="section-content">
             <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
             <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
         </div>
     </section>
 
-     <section id="education">
-       <h2>Education</h2>
-        <div class="education-item">
-            <h3>Bachelor of Technology in Mechanical Engineering with specialization in Design and Manufacturing</h3>
-            <p>Indian Institute of Information Technology Design and Manufacturing Kurnool</p>
-            <p><strong>Duration:</strong> Dec 2020 – May 2024</p>
-            <p><strong>Relevent Courses:</strong> Minor in Machine Learning and Data Science, Machine Learning, Foundations of Data Science, Problem Solving and Computer Programming, Differential and Integral Calculus, Linear Algebra, Differential Equations, Engineering Mechanics, Sensors and Controls, Automation in Manufacturing</p>
+    <section id="education" class="two-column">
+        <div class="section-title">Education</div>
+        <div class="section-content">
+            <h3>Bachelor of Technology in Mechanical Engineering</h3>
+            <p>Jawaharlal Nehru Technological University, Hyderabad</p>
+            <p><strong>Duration:</strong> August 2018 – May 2022</p>
+            <p><strong>CGPA:</strong> 8.5/10</p>
         </div>
     </section>
 
-     <section id="experience">
-       <h2>Experience</h2>
-      
-
-            <div class="timeline-item">
-                <div class="marker"></div>
-                <div class="content">
-                    <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-                    <p><strong>Duration:</strong> December 2021 – May 2022</p>
-                    <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
-                </div>
-          <div class="timeline">
-                <div class="timeline-item">
+    <section id="experience">
+        <div class="section-title">Experience</div>
+        <div class="timeline">
+            <div class="timeline-item left">
                 <div class="marker"></div>
                 <div class="content">
                     <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
@@ -318,6 +223,14 @@
                     <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
                 </div>
             </div>
+
+            <div class="timeline-item right">
+                <div class="marker"></div>
+                <div class="content">
+                    <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
+                    <p><strong>Duration:</strong> December 2021 – May 2022</p>
+                    <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -331,49 +244,4 @@
             <span class="skill-item">OpenCV</span>
             <span class="skill-item">PyTorch</span>
             <span class="skill-item">Machine Learning</span>
-            <span class="skill-item">CAD</span>
-            <span class="skill-item">Prototyping</span>
-            <span class="skill-item">Automation</span>
-        </div>
-    </section>
-
-    <section id="work">
-        <h2>Projects</h2>
-        <div class="work-grid">
-            <div class="card">
-                <h3>Computer Vision-Based Dimensional Measurement System</h3>
-                <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
-            </div>
-
-            <div class="card">
-                <h3>Enhancing Welding Processes Using ML</h3>
-                <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
-            </div>
-
-            <div class="card">
-                <h3>Autonomous Fingerprint vehicle starter</h3>
-                <p>Created a fingerprint vehicle starter that works using Ardino UNO.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-links">
-            <a href="mailto:saikaushikbaira06@gmail.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
-            </a>
-            <a href="https://github.com/Kaushikbaira">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
-            </a>
-            <a href="https://linkedin.com/in/kaushik-baira">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Sai Kaushik Baira. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            <span class
