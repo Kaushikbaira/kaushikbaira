@@ -80,9 +80,15 @@
         }
 
         #about {
-            max-width: 800px;
-            text-align: center;
-            line-height: 1.8;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            max-width: 1200px;
+            gap: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         #skills .skills-list {
@@ -274,9 +280,12 @@
         <p>Design Engineer | Robotics Enthusiast | AI & Machine Learning Specialist</p>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing. My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+     <section id="about">
+        <div class="about-title">About Me</div>
+        <div class="about-content">
+            <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
+            <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
+        </div>
     </section>
 
      <section id="education">
