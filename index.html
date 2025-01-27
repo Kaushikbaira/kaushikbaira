@@ -67,7 +67,7 @@
         }
 
         #hero {
-            background: url('/mnt/data/Robotic Arm.jpg') no-repeat center center;
+            background: url('C:\\Users\\Kaushik\\Downloads\\Robotic Arm.jpg') no-repeat center center;
             background-size: cover;
             position: relative;
             min-height: 100vh;
@@ -176,6 +176,52 @@
             color: #777;
         }
 
+        /* Timeline styles */
+        #experience {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .timeline-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #333;
+        }
+
+        .timeline-content div {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .timeline-content div .year {
+            position: absolute;
+            left: -5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .timeline-content div .description {
+            margin-left: 4rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
         @media (max-width: 768px) {
             #about, #education, #experience, #skills, #work, #contact {
                 text-align: center;
@@ -230,12 +276,18 @@
         <h2>Experience</h2>
         <div class="timeline-content">
             <div>
-                <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
-                <p>Developed automated systems to enhance workflows, leading to a 15% efficiency increase.</p>
+                <div class="year">Dec 2020 – May 2024</div>
+                <div class="description">
+                    <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
+                    <p>Developed automated systems to enhance workflows, leading to a 15% efficiency increase.</p>
+                </div>
             </div>
             <div>
-                <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-                <p>Implemented machine learning models for predictive maintenance and detailed inspections.</p>
+                <div class="year">May 2024 – Present</div>
+                <div class="description">
+                    <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
+                    <p>Implemented machine learning models for predictive maintenance and detailed inspections.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -281,7 +333,6 @@
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
         <div class="contact-links">
             <a href="mailto:saikaushikbaira06@gmail.com">
                 <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
@@ -295,8 +346,8 @@
             <a href="https://www.instagram.com">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
             </a>
-            <a href="https://twitter.com">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="X">
+            <a href="https://x.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/X_Logo_2023.svg" alt="X">
             </a>
         </div>
     </section>
