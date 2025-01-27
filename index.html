@@ -6,7 +6,6 @@
     <title>Sai Kaushik Baira Portfolio</title>
 
     <style>
-        /* Base styles */
         * {
             margin: 0;
             padding: 0;
@@ -18,6 +17,7 @@
             color: #111;
             background-color: #fff;
             scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
         header {
@@ -56,186 +56,63 @@
         }
 
         section {
-            padding: 4rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 6rem 2rem 4rem;
+            text-align: left;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            color: #111;
+            text-align: left;
         }
 
         #hero {
-            background: linear-gradient(to bottom, #e3f2fd, #fff);
-            text-align: center;
+            background: url('https://images.app.goo.gl/X8VMPz3ucU2QzeYcA') no-repeat center center;
+            background-size: cover;
+            position: relative;
             min-height: 100vh;
-        }
-
-        #hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        #hero p {
-            font-size: 1.25rem;
-            color: #555;
-        }
-
-        #about {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            margin: 2rem auto;
-            max-width: 1000px;
-            align-items: center;
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        #about .about-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #3b82f6;
-            text-align: left;
-        }
-
-        #about .about-content {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #333;
-            text-align: left;
-        }
-
-        #education {
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 2rem;
-            background: rgba(59, 130, 246, 0.1);
-            border: 2px solid #3b82f6;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        #education h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #3b82f6;
-        }
-
-        #education .education-item {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-
-        #education .education-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        #education .education-item p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        #education .education-item ul {
-            list-style-type: disc;
-            margin-left: 2rem;
-            color: #555;
-        }
-
-          section {
-            padding: 4rem 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-        #experience {
-            display: grid;
-            grid-template-columns: 30% 70%;
-            gap: 2rem;
-            margin: 2rem auto;
-            padding: 2rem;
-            max-width: 1000px;
-            position: relative;
-        }
-
-        #experience h2 {
-            grid-column: span 2;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #3b82f6;
             text-align: center;
+            color: #fff;
         }
 
-        #experience::before {
+        #hero::before {
             content: "";
             position: absolute;
-            top: 3rem;
-            bottom: 3rem;
-            left: 30%;
-            width: 4px;
-            background: #3b82f6;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
 
-        .timeline-dates {
-            text-align: right;
-            padding-right: 1rem;
-            font-size: 1rem;
-            color: #555;
+        #hero h1, #hero p {
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
         }
 
-        .timeline-content {
-            padding-left: 1rem;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #111;
-        }
-
-        .timeline-content p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        @media (max-width: 768px) {
-            #experience {
-                grid-template-columns: 1fr;
-            }
-
-            #experience::before {
-                left: 5%;
-            }
-
-            .timeline-dates {
-                text-align: left;
-                padding-right: 0;
-                padding-bottom: 1rem;
-            }
-
-            .timeline-content {
-                padding-left: 0;
-            }
-        }
-
-        #skills {
+        #about, #education, #experience, #skills, #work, #contact {
             margin: 2rem auto;
-            max-width: 800px;
-            text-align: center;
+            max-width: 1000px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
         }
 
-        #skills .skills-list {
+        #education .education-item, #experience .timeline-content div {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
         }
 
         .skill-item {
@@ -245,11 +122,10 @@
             font-weight: bold;
         }
 
-        #work .work-grid {
+        .work-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .card {
@@ -265,35 +141,25 @@
             transform: translateY(-5px);
         }
 
-        .card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        #contact {
-            text-align: center;
-        }
-
-        #contact .contact-links {
+        .contact-links {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
         }
 
-        .contact-links img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s;
+        .contact-links a {
+            text-decoration: none;
+            color: #3b82f6;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .contact-links img:hover {
-            transform: scale(1.2);
+        .contact-links a img {
+            width: 24px;
+            height: 24px;
         }
 
         footer {
@@ -304,26 +170,29 @@
             color: #777;
         }
 
+        footer .social-icons {
+            margin-top: 1rem;
+        }
+
+        footer .social-icons a {
+            margin: 0 0.5rem;
+            display: inline-block;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #3b82f6;
+        }
+
         @media (max-width: 768px) {
-            #about {
-                grid-template-columns: 1fr;
+            #about, #education, #experience, #skills, #work, #contact {
                 text-align: center;
             }
 
-            #experience::before {
-                left: 25%;
-            }
-
-            .timeline-item {
-                width: 100%;
-                float: none;
-                text-align: center;
-                padding: 0;
-            }
-
-            .timeline-item.left,
-            .timeline-item.right {
-                text-align: center;
+            .skills-list {
+                flex-direction: column;
             }
         }
     </style>
@@ -346,56 +215,35 @@
 
     <section id="hero">
         <h1>Sai Kaushik Baira</h1>
-        <p>Design Engineer | Robotics Enthusiast </p>
+        <p>Design Engineer | Robotics Enthusiast</p>
     </section>
 
     <section id="about">
-        <div class="about-title">About Me</div>
-        <div class="about-content">
-            <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
-            <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
-        </div>
+        <h2>About Me</h2>
+        <p>I am a passionate Design Engineer with expertise in robotics, machine learning, and computer vision. Currently working at Alcom Extrusions Pvt Ltd, I contribute to innovative solutions and automation in manufacturing.</p>
+        <p>My goal is to pursue an MS in Robotics and drive transformative innovations in the field.</p>
     </section>
 
     <section id="education">
         <h2>Education</h2>
         <div class="education-item">
-            <h3>Bachelor of Technology in Mechanical Engineering with specialization in Design and Manufacturing</h3>
+            <h3>Bachelor of Technology in Mechanical Engineering</h3>
             <p>Indian Institute of Information Technology Design and Manufacturing Kurnool</p>
             <p><strong>Duration:</strong> Dec 2020 – May 2024</p>
-            <p><strong>Relevant Courses:</strong></p>
-            <ul>
-                <li>Minor in Machine Learning and Data Science</li>
-                <li>Foundations of Data Science</li>
-                <li>Machine Learning</li>
-                <li>Engineering Mechanics</li>
-                <li>Sensors and Controls</li>
-                <li>Automation in Manufacturing</li>
-            </ul>
-            <p><strong>Activities:</strong></p>
-            <ul>
-                <li>President of the Robotics Club, leading a team to national-level competitions</li>
-                <li>Organized workshops on AI and Machine Learning applications in engineering</li>
-                <li>Published a paper on "Automation in Small Scale Manufacturing Units"</li>
-            </ul>
+            <p><strong>Relevant Courses:</strong> Minor in Machine Learning, Automation, Engineering Mechanics</p>
         </div>
     </section>
 
-<body>
     <section id="experience">
         <h2>Experience</h2>
-        <div class="timeline-dates">
-            <p>June 2022 – Present</p>
-            <p>December 2021 – May 2022</p>
-        </div>
         <div class="timeline-content">
             <div>
                 <h3>Design Engineer - Alcom Extrusions Pvt Ltd</h3>
-                <p>Developed automated systems to enhance industrial workflows, leading to a 15% increase in production efficiency. Led data-driven projects for quality assurance, reducing defect rates by 10%.</p>
+                <p>Developed automated systems to enhance workflows, leading to a 15% efficiency increase.</p>
             </div>
-            <div style="margin-top: 2rem;">
+            <div>
                 <h3>Intern - Alcom Extrusions Pvt Ltd</h3>
-                <p>Collaborated on the implementation of machine learning models for predictive maintenance and conducted detailed quality inspections for key manufacturing processes.</p>
+                <p>Implemented machine learning models for predictive maintenance and detailed inspections.</p>
             </div>
         </div>
     </section>
@@ -411,9 +259,6 @@
             <span class="skill-item">Machine Learning</span>
             <span class="skill-item">CAD</span>
             <span class="skill-item">Prototyping</span>
-            <span class="skill-item">Automation</span>
-            <span class="skill-item">FlexSim</span>
-            <span class="skill-item">MINITAB</span>
         </div>
     </section>
 
@@ -421,18 +266,12 @@
         <h2>Projects</h2>
         <div class="work-grid">
             <div class="card">
-                <h3>Computer Vision-Based Dimensional Measurement System</h3>
-                <p>Reduced inspection time by 70% using a real-time vision system for automated measurements at Alcom Extrusions Pvt Ltd.</p>
+                <h3>Computer Vision-Based Measurement</h3>
+                <p>Reduced inspection time by 70% with automated real-time vision systems.</p>
             </div>
-
             <div class="card">
-                <h3>Enhancing Welding Processes Using ML</h3>
-                <p>Developed a defect classification system using machine learning, improving weld quality and reducing inspection costs.</p>
-            </div>
-
-            <div class="card">
-                <h3>Autonomous Fingerprint vehicle starter</h3>
-                <p>Created a fingerprint vehicle starter that works using Ardino UNO.</p>
+                <h3>ML-Based Welding Process</h3>
+                <p>Improved weld quality through defect classification using machine learning.</p>
             </div>
         </div>
     </section>
@@ -441,25 +280,26 @@
         <h2>Contact</h2>
         <div class="contact-links">
             <a href="mailto:saikaushikbaira06@gmail.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Email_icon.png" alt="Email Icon">
+                Email
             </a>
             <a href="https://github.com/Kaushikbaira">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon">
+                GitHub
             </a>
             <a href="https://www.linkedin.com/in/kaushik-baira-539795218/">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
-             <a href="https://www.instagram.com/kaushikbaira?igsh=ZDhxYXRhY3FvYW1z">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-            </a>
-            <a href="https://x.com/BairaKaushik?t=LzqgbkiZuXqPIuexu4MqBQ&s=08">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="X (Twitter)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn Icon">
+                LinkedIn
             </a>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Sai Kaushik Baira. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://github.com/Kaushikbaira">GitHub</a>
+            <a href="https://www.linkedin.com/in/kaushik-baira-539795218/">LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>
