@@ -16,7 +16,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -53,6 +53,7 @@
         h1 {
             font-size: 2rem;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         h2 {
@@ -73,6 +74,34 @@
             margin-bottom: 10px;
         }
 
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .media-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1 1 calc(45% - 10px);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .media-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
         .projects {
             display: flex;
             gap: 20px;
@@ -84,7 +113,7 @@
             background: #fff;
             border-radius: 12px;
             padding: 15px;
-            width: 45%;
+            flex: 1 1 calc(45% - 10px);
             text-align: left;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -146,27 +175,22 @@
             </ul>
         </section>
 
-        <section class="section">
-            <h2>Getting Started</h2>
-            <h3>Prerequisites</h3>
-            <ul>
-                <li>Arduino IDE installed on your system.</li>
-                <li>Required library: Adafruit Fingerprint Sensor Library (v2.0.4).</li>
-                <li>Basic understanding of Arduino and circuits.</li>
-            </ul>
-            <h3>Setup Instructions</h3>
-            <h4>Hardware Setup</h4>
-            <p>Connect the AS608 fingerprint sensor to the Arduino UNO. Follow the circuit schematic for proper connections.</p>
-            <h4>Software Setup</h4>
-            <p>Open the <code>src/enrollment_code.ino</code> in the Arduino IDE and upload it for enrollment.</p>
-        </section>
-
-        <section class="section">
-            <h2>How It Works</h2>
-            <h3>Enrollment</h3>
-            <p>Assign unique IDs to fingerprints and store them securely.</p>
-            <h3>Verification</h3>
-            <p>Match fingerprints against stored templates to allow or deny access.</p>
+        <section class="section media-section">
+            <div class="media-card">
+                <h3>Circuit Design</h3>
+                <img src="circuit-design-placeholder.png" alt="Circuit Design">
+            </div>
+            <div class="media-card">
+                <h3>Working Demonstration</h3>
+                <video controls>
+                    <source src="demo-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="media-card">
+                <h3>Block Diagram</h3>
+                <img src="block-diagram-placeholder.png" alt="Block Diagram">
+            </div>
         </section>
 
         <section class="section">
@@ -212,7 +236,7 @@
         </section>
 
         <footer>
-            <p>&copy; 2025 Sai Kaushik Baira</p>
+            <p>&copy; 2025 Kaushik Baira. All Rights Reserved.</p>
         </footer>
     </div>
 </body>
