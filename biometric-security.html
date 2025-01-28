@@ -5,159 +5,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biometric Access Controlled Automotive Security System</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#details">Project Details</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <h1 style="text-align: left;">Biometric Access Controlled Automotive Security System</h1>
-        <p style="text-align: left;">Enhancing vehicle security with advanced biometric authentication technology.</p>
-    </section>
-
-    <section id="details">
-        <h2 style="text-align: left;">Project Overview</h2>
-        <p style="text-align: left;">
-            This project replaces traditional keys with a biometric fingerprint recognition system, providing a secure and user-friendly solution for automotive access and control.
-        </p>
-
-        <h3 style="text-align: left;">Features</h3>
-        <ul style="text-align: left;">
-            <li>Fingerprint authentication for secure vehicle access.</li>
-            <li>Easy enrollment and verification of fingerprints.</li>
-            <li>Compact and efficient circuit design.</li>
-        </ul>
-
-        <h3 style="text-align: left;">How It Works</h3>
-        <ul style="text-align: left;">
-            <li><strong>Enrollment:</strong> Assign unique IDs to fingerprints and store them securely.</li>
-            <li><strong>Verification:</strong> Match fingerprints against stored templates to allow or deny access.</li>
-        </ul>
-
-        <h3 style="text-align: left;">Technical Details</h3>
-        <ul style="text-align: left;">
-            <li><strong>Organization:</strong> Alcom Extrusions Pvt Ltd, Hyderabad</li>
-            <li><strong>Role:</strong> Lead Developer</li>
-            <li><strong>Team Size:</strong> 3</li>
-            <li>
-                <strong>Tools & Technologies:</strong> Arduino UNO, AS608 fingerprint sensor, Adafruit Fingerprint Sensor Library, Circuit Prototyping.
-            </li>
-        </ul>
-
-        <h3 style="text-align: left;">Problem Statement</h3>
-        <p style="text-align: left;">
-            Traditional automotive security systems are prone to unauthorized access and key duplication. The project aims to enhance security by replacing keys with biometric authentication.
-        </p>
-
-        <h3 style="text-align: left;">Contributions</h3>
-        <ul style="text-align: left;">
-            <li>Designed and implemented a compact and efficient biometric system.</li>
-            <li>Developed firmware for secure fingerprint enrollment and verification.</li>
-            <li>Optimized circuit design to ensure reliability and efficiency.</li>
-        </ul>
-    </section>
-
-    <section id="next-projects">
-        <div class="project" style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
-            <h3 style="text-align: left;"><a href="cv-measurement.html" style="text-decoration: none;">Computer Vision-based Dimensional Measurement System</a></h3>
-        </div>
-        <div class="project" style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
-            <h3 style="text-align: left;"><a href="thermal-management.html" style="text-decoration: none;">Thermal Management of Lithium-ion Battery Pack</a></h3>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 style="text-align: left;">Contact</h2>
-        <div class="contact-links" style="display: flex; gap: 20px;">
-            <a href="mailto:saikaushikbaira06@gmail.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 30px;">
-            </a>
-            <a href="https://github.com/Kaushikbaira">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" style="width: 30px;">
-            </a>
-            <a href="https://linkedin.com/in/kaushik-baira">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 30px;">
-            </a>
-            <a href="https://instagram.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 30px;">
-            </a>
-            <a href="https://twitter.com">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width: 30px;">
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Kaushik Baira. All Rights Reserved.</p>
-    </footer>
-
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
         }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            z-index: 1000;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        header ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 0;
+        .section {
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        header ul li {
-            margin: 0 15px;
+        h1, h2, h3 {
+            color: #222;
+            text-align: left;
         }
 
-        header ul li a {
-            color: white;
-            text-decoration: none;
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        section {
-            padding: 60px 20px;
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
 
-        #hero {
-            background-color: #f4f4f4;
-            padding: 60px 20px;
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
 
-        #details ul {
-            list-style: disc;
+        ul {
             padding-left: 20px;
         }
 
-        .project:hover {
-            background-color: #f0f0f0;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .projects {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            width: 45%;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .contact-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
         }
 
         .contact-links img:hover {
-            transform: scale(1.1);
-            transition: transform 0.2s;
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+            color: #fff;
+            border-radius: 12px;
+            margin-top: 20px;
         }
     </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="section">
+            <h1>Biometric Access Controlled Automotive Security System</h1>
+            <p>This project enhances vehicle security by replacing traditional keys with a biometric fingerprint recognition system. It provides a secure, user-friendly solution for automotive access and control.</p>
+        </section>
+
+        <section class="section">
+            <h2>Features</h2>
+            <ul>
+                <li>Fingerprint authentication for secure vehicle access.</li>
+                <li>Easy enrollment and verification of fingerprints.</li>
+                <li>Compact and efficient circuit design.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Getting Started</h2>
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Arduino IDE installed on your system.</li>
+                <li>Required library: Adafruit Fingerprint Sensor Library (v2.0.4).</li>
+                <li>Basic understanding of Arduino and circuits.</li>
+            </ul>
+            <h3>Setup Instructions</h3>
+            <h4>Hardware Setup</h4>
+            <p>Connect the AS608 fingerprint sensor to the Arduino UNO. Follow the circuit schematic for proper connections.</p>
+            <h4>Software Setup</h4>
+            <p>Open the <code>src/enrollment_code.ino</code> in the Arduino IDE and upload it for enrollment.</p>
+        </section>
+
+        <section class="section">
+            <h2>How It Works</h2>
+            <h3>Enrollment</h3>
+            <p>Assign unique IDs to fingerprints and store them securely.</p>
+            <h3>Verification</h3>
+            <p>Match fingerprints against stored templates to allow or deny access.</p>
+        </section>
+
+        <section class="section">
+            <h2>Contribution</h2>
+            <ul>
+                <li><strong>Organization:</strong> Alcom Extrusions Pvt Ltd, Hyderabad</li>
+                <li><strong>Team Size:</strong> 3</li>
+                <li><strong>Role:</strong> Lead Developer</li>
+                <li><strong>Contribution:</strong> Designed and implemented a real-time computer vision system for automated dimensional measurements. Used Python, OpenCV, and industrial cameras to enhance precision and efficiency. Reduced inspection time by 70% while ensuring critical tolerance compliance.</li>
+            </ul>
+        </section>
+
+        <section class="section projects">
+            <div class="project-card">
+                <h3>Computer Vision-Based Dimensional Measurement System</h3>
+                <p>Tools Used: Arduino Uno, Prototyping</p>
+            </div>
+            <div class="project-card">
+                <h3>Thermal Management of Lithium-ion Battery Pack</h3>
+                <p>Tools Used: Ansys, NX</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="mailto:saikaushikbaira06@gmail.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                </a>
+                <a href="https://github.com/Kaushikbaira">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/kaushik-baira">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Kaushik Baira. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
