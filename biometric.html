@@ -90,6 +90,12 @@
             flex: 1 1 calc(45% - 10px);
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
 
         .media-card img {
@@ -106,6 +112,12 @@
             width: 30px;
             height: 30px;
             margin: 5px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .contact-links a img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
         }
 
         footer {
@@ -116,6 +128,30 @@
             padding: 10px;
             border-radius: 12px;
             margin-top: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1 1 calc(45% - 10px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .project-card h3 {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -145,16 +181,10 @@
         </section>
 
         <section class="section">
-            <h2>Components and Specifications</h2>
-            <ul>
-                <li>AS608 Optical Fingerprint Sensor Module</li>
-                <li>Arduino UNO</li>
-                <li>Relay</li>
-                <li>100 RPM DC Motor</li>
-                <li>Breadboard</li>
-                <li>12V Battery</li>
-            </ul>
+            <h2>Motivation</h2>
+            <p>The motivation behind this project was to enhance vehicle security while introducing convenience. By leveraging biometric technology, we aimed to minimize theft risks and eliminate the need for physical keys, ensuring only authorized access to the vehicle. This innovation is particularly beneficial for high-value or luxury cars.</p>
         </section>
+
 
         <section class="section media-section">
             <div class="media-card">
@@ -168,6 +198,34 @@
             <div class="media-card">
                 <h3>Working Demonstration</h3>
                 <img src="image/Demo_Verification_1.gif" alt="Working Demonstration">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contributions</h2>
+            <ul>
+                <li>Developed the complete circuit design and integrated components.</li>
+                <li>Programmed the Arduino UNO for fingerprint authentication.</li>
+                <li>Designed and implemented the block diagram for system architecture.</li>
+                <li>Conducted extensive testing and debugging to ensure reliability.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Other Projects</h2>
+            <div class="media-section">
+                <div class="project-card">
+                    <a href="project2.html">
+                        <h3>Project 2</h3>
+                        <p>Click to view details</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="project3.html">
+                        <h3>Project 3</h3>
+                        <p>Click to view details</p>
+                    </a>
+                </div>
             </div>
         </section>
 
