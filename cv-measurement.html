@@ -4,9 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV-Based Dimensional Measurement System</title>
+    <title>Computer Vision Based Dimensional Measurement System</title>
     <style>
-        /* Same styles from the biometric.html */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .details-row {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .details-item {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .media-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1 1 calc(45% - 10px);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .media-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .contact-links {
+            text-align: center;
+        }
+
+        .contact-links a img {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .contact-links a img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1 1 calc(45% - 10px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .project-card h3 {
+            margin: 10px 0;
+        }
     </style>
 </head>
 
@@ -17,56 +169,55 @@
 
     <div class="container">
         <section class="section">
-            <h1>Computer Vision-Based Dimensional Measurement System</h1>
-            <p>Developed an advanced system for real-time automated dimensional quality inspections using computer vision.</p>
+            <h1>Computer Vision Based Dimensional Measurement System</h1>
+            <p>Designed and implemented a real-time computer vision system for automated dimensional measurements.</p>
         </section>
 
         <section class="section">
             <div class="details-row">
                 <div class="details-item"><strong>Organization:</strong> Alcom Extrusions Pvt Ltd</div>
+                <div class="details-item"><strong>Team Size:</strong> 3</div>
                 <div class="details-item"><strong>Role:</strong> Lead Developer</div>
             </div>
         </section>
 
         <section class="section">
             <h2>About the Product</h2>
-            <p>This system leverages industrial cameras and computer vision techniques to measure dimensions with high precision in real-time. By automating manual inspections, the solution enhances efficiency, accuracy, and consistency in quality assurance processes.</p>
+            <p>AThis system leverages industrial cameras and computer vision techniques to measure dimensions with high precision in real-time. By automating manual inspections, the solution enhances efficiency, accuracy, and consistency in quality assurance processes.</p>
         </section>
 
         <section class="section">
             <h2>Motivation</h2>
-            <p>The motivation behind this project was to streamline manufacturing quality inspection processes. By replacing manual measurement methods with a computer vision-based system, we aimed to reduce inspection time and eliminate human errors, ensuring adherence to critical tolerances.</p>
+            <p>The motivation behind this project was to enhance dimensional measurement, replacing traditional inspection tools and gauges, whike ensuring efficient functioning and user accesibility. </p>
         </section>
 
         <section class="section media-section">
             <div class="media-card">
                 <h3>Circuit Design</h3>
-                <img src="image/component_setup_cv.jpg" alt="Circuit Design">
+                <img src="image/component_setup.jpg" alt="Circuit Design">
             </div>
             <div class="media-card">
                 <h3>Block Diagram</h3>
-                <img src="image/Block Diagram CV.png" alt="Block Diagram">
+                <img src="image/Block Diagram.png" alt="Block Diagram">
             </div>
             <div class="media-card">
                 <h3>Working Demonstration</h3>
-                <img src="image/Demo_CV.gif" alt="Working Demonstration">
+                <img src="image/Demo_Verification_1.gif" alt="Working Demonstration">
             </div>
         </section>
 
         <section class="section">
             <h2>Contributions</h2>
             <ul>
-                <li>Designed and developed the vision-based system architecture.</li>
-                <li>Programmed algorithms using Python and OpenCV for dimensional measurements.</li>
-                <li>Integrated industrial cameras and hardware for real-time data capture.</li>
-                <li>Achieved 70% reduction in inspection time while maintaining accuracy.</li>
+                <li>Designed and implemented a real-time computer vision system for automated dimensional measurements.	</li>
+                <li>Used Python, OpenCV, and industrial cameras to enhance precision and efficiency.</li>
             </ul>
         </section>
 
         <section class="section projects">
             <div class="project-card">
-                <a href="biometric.html">
-                    <h3>Biometric Access-Controlled Automotive Security System</h3>
+                <a href="project1.html">
+                    <h3>Development and Implementation of Precision Forging Die for Industrial Grade Carrriage Bolts</h3>
                 </a>
             </div>
             <div class="project-card">
