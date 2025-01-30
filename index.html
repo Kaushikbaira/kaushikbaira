@@ -67,9 +67,10 @@
             text-align: left;
         }
 
-        #hero {
+                #hero {
             background: url('image/portfolio_hero.avif') no-repeat center center;
             background-size: cover;
+            background-color: #fff; 
             position: relative;
             min-height: 100vh;
             display: flex;
@@ -77,9 +78,9 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #fff;
+            color: #111; /* Default text color */
         }
-
+        
         #hero::before {
             content: "";
             position: absolute;
@@ -87,21 +88,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0);
+            background-color: rgba(255, 255, 255, 0.8); 
             z-index: 1;
         }
-
+        
         #hero h1 {
             font-size: 3rem;
             z-index: 2;
-            opacity: 0.95;
+            color: #111; 
+            font-weight: bold;
         }
-
+        
         #hero p {
             font-size: 1.5rem;
             z-index: 2;
-            opacity: 0.95;
+            color: #555; 
         }
+
 
         #about, #education, #experience, #skills, #work, #contact {
             margin: 2rem auto;
